@@ -208,7 +208,7 @@ main:after {
         line-height: 125%;
 }
 
-.allButSideNav {
+.allButSideNav, .mainWrapper {
     float: left;
     width: 1000px;
 }
@@ -261,7 +261,7 @@ main:after {
     text-decoration: none;
 }
 
-main aside:after {
+aside:after {
     clear: both;
 }
 
@@ -289,7 +289,7 @@ figure figcaption {
     padding-bottom: 10px;
 }
 
-main article h2 {
+article h2 {
     color: black; /*rgb(255,228,63);*/
     font-weight: bold;
     font-size: 180%;
@@ -329,7 +329,7 @@ footer .footerGallery img {
 footer .footerContent p {
     text-align: right;
     font-size: 75%;
-    margin-right: 330px;
+    margin-right: 75px;
 }
 
 li a:hover, p a:hover {
