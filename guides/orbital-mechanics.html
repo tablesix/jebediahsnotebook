@@ -89,27 +89,33 @@ if(infocus=='back'){popupWindow.blur();popupWindow.location=mypage;popupWindow.b
 
             <h2>Delta-V</h2>
             <p>
-                Delta-v is a fancy term that means "how far your rocket can go." As you might have guessed, this is a very important concept to understand if you want to make your rockets go to certain places. If you want to go to the Mun and back, 7200 dv is a good number to aim for. If you only want to get to orbit around Kerbin, you only need about 4000 at most.
+                Delta-v is a fancy term that means change in velocity, or more crudely, "how far your rocket can go." It's most often measured in either meters per second (m/s) or sometimes kilometers per second (km/s) if the value is large enough. As you might have guessed, this is a very important concept to understand if you want to build a rocket to get to a specific place.
+            </p>
+            <p>
+                If you want to go to the Mun and back, 7200m/s of dv is a good number to aim for, and gives you plenty of room for error It's technically possible for around 6,000m/s. You can technically get by with as little as about 6000m/s, if you're good at it. If you only want to get to orbit around Kerbin, you only need about 4000m/s at most, and the some of the most efficient launches have reportedly gotten below 3000m/s of delta-v. An interesting side note is that it takes roughly a 9300m/s potential change in velocity to reach orbit around Earth. This is more than it takes for a complete round trip to Duna.
             </p>
             <p>
                 So you're probably wondering now, "How do I calculate this dv thing?" The answer is fairly simple, but might look a little scary if you aren't too good with math:
             </p>
-            <p class="noWrapSmall"><strong>
-                Dv = 9.81 x I(sp) x ln(M/m)
+            <blockquote style="text-align: center;">
+                <strong>
+                    dv = 9.81 x I<sub>sp</sub> x ln(M/m)
                 </strong>
-            </p>
+            </blockquote>
             <p>
-                Dv, also known as delta-v, is the number you want. 9.81 is a conversion factor used when your Isp is given in seconds (which it is in KSP). ln is "natural log" and you don't need to worry about that too much. Just accept that you have to plug that into the equation as a thing. M is how much mass your ship has with all of its fuel on board, and m is how much fuel your ship has with no fuel on board.
-
+                Dv, also known as delta-v, is the number you want. 9.81 is a conversion factor used when your I<sub>sp</sub> is given in seconds (which it is in KSP). ln is "natural log" and you don't need to worry about that too much. Just accept that you have to plug that into the equation as a thing. M is how much mass your ship has with all of its fuel on board, and m is how much fuel your ship has with no fuel on board.<br />
+                </p>
+                <p>
+                    If you'd like to know more about logarithms (it's really not necessary for this), check out <a href="https://www.mathsisfun.com/algebra/logarithms.html" target="_blank">this website.</a>
                 </p>
             <p>
                 Let's try an example: <br />
                 Total mass (M): 50 tons <br />
                 Dry mass (m): 35 tons <br />
-                Specific Impulse (Isp): 320 <br />
+                Specific Impulse (i<sub>sp</sub>): 320 <br />
                 </p>
                 <form >
-                    How much delta-v does this ship have, to the nearest whole number? (leave off units.)<br />
+                    <p>What delta-v is this ship capable of (in m/s), to the nearest whole number? (leave off units.)</p><br />
                     <input type="text" name="question-1" pattern="(1120|1121|1119)$" />
                     <input style="font-size:12px;color:#000066;font-family:arial;" type="button" name="B1" value="Solution" onClick="popup('orbital-mechanics/forms/answer-1.html','pagename','350','250','center','front');" />
             </form>
@@ -126,23 +132,23 @@ if(infocus=='back'){popupWindow.blur();popupWindow.location=mypage;popupWindow.b
                     <h3>Stage 0</h3>
                         <p>Wet Mass: 50 tons</p>
                         <p>Dry Mass: 30 tons</p>
-                        <p>Specific Impulse (Isp): 800</p>
-                        <p>What is the delta-v of this stage?</p>
+                        <p>Specific Impulse (i<sub>sp</sub>): 800</p>
+                        <p>What delta-v is this stage capable of?</p>
                     <input type="text" pattern="(4009)$" />
                     <h3>Stage 1 (Not including the mass of the stage above it. Be sure to account for stage 0)</h3>
                         <p>Wet Mass: 80 tons</p>
                         <p>Dry Mass: 30 tons</p>
-                        <p>Specific Impulse (Isp): 290</p>
-                        <p>What is the delta-v for this stage?</p>
+                        <p>Specific Impulse (i<sub>sp</sub>): 290</p>
+                        <p>What delta-v is this stage capable of?</p>
                         <input type="text" pattern="(1381)$" />
                     <h3>Stage 2 (Not including the mass of either stages above it. Be sure to account for stages 0 and 1)</h3>
                         <p>Wet Mass: 100 tons</p>
                         <p>Dry Mass: 35 tons</p>
-                        <p>Specific Impulse (Isp): 285</p>
-                        <p>What is the delta-v for this stage?</p>
+                        <p>Specific Impulse (i<sub>sp</sub>): 285</p>
+                        <p>What delta-v is this stage capable of?</p>
                         <input type="text" pattern="(929)$" />
                         <h3>Totals</h3>
-                        <p>What is the delta-v for the entire rocket? (hint: add up all of your answers)</p>
+                        <p>What is the delta-v possible for the entire rocket? (hint: add up all of your answers)</p>
                         <input type="text" pattern="(6319)$" />
                         <input style="font-size:12px;color:#000066;font-family:arial;" type="button" name="B1" value="Solution" onClick="popup('orbital-mechanics/forms/answer-2.html','pagename','350','250','center','front');">
                 </form>
@@ -179,7 +185,7 @@ if(infocus=='back'){popupWindow.blur();popupWindow.location=mypage;popupWindow.b
                 The apoapsis is the highest point in your orbit, where you are the farthest from the planet you are orbiting. You should do your best to make all of your maneuvers at these two points, except for a special case that I will explain shortly. The more circular your orbit is, the less it matters when you make a maneuver. I like to aim for a solid 72,000 by 72,000 meter orbit, which I can nail to within a few hundred meters when I want to. Within 2-3 km is close enough though.
             </p>
             <p>
-                You will always be moving fastest at your periapsis, and there is also something called the "Oberth Effect" where the closer you are to a source of gravity, the more bang for your buck you can get out of your fuel. You essentially use the planet's gravity to speed you along. This becomes more pronounced to more delta-v you need to spend. For example, you will notice a bigger difference trying to get from Kerbin to Jool than you would from Kerbin to Eve or Duna.
+                You will always be moving fastest at your periapsis, and there is also something called the "Oberth Effect" where the closer you are to a source of gravity, the more bang for your buck you can get out of your fuel. You essentially use the planet's gravity to speed you along. This becomes more pronounced the more delta-v you need to spend. For example, you will notice a bigger difference trying to get from Kerbin to Jool than you would from Kerbin to Eve or Duna.
             </p>
             <p>
                 You will always be moving slowest at your apoapsis. You should make maneuvers here for landing when you can. Sometimes you might want to land at a specific place, such as at the Kerbal Space Center. These special cases might mean you have to make your maneuver at some other point in your orbit. It’s best to use pretty much circular orbit in these cases.
