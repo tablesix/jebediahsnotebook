@@ -1,0 +1,119 @@
+/*--------------------------------------
+general layouts for pages
+----------------------------------------*/
+
+//header styles
+header {
+	display: block;
+	width: 100%;
+	background-color: $primary;
+	padding-bottom: 10px;
+}
+
+header h1,
+header h1 a{
+	color: $logo;
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.25em;
+}
+
+header h2,
+header h2 a {
+	color: #fff;
+	text-align: center;
+	line-height: .75;
+	padding-bottom: 15px;
+	font-size: 1em;
+}
+
+//header nav styles
+
+header nav ul{
+	margin: 0 auto;
+	text-align: center;
+}
+
+header nav li,
+header nav li a {
+	color: $accent;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+header nav li {
+	display: inline;
+	margin-left: 10px;
+	margin-right: 10px;
+
+}
+
+header nav li a {
+	display: inline-block;
+	min-width: 80px;
+}
+
+header nav > ul > li {
+	background-color: darken($logo, 85%);
+	border-radius: 10px;
+	padding: 5px 8px 5px 8px;
+}
+
+header nav > ul > li:hover {
+	background-color: darken($primary, 15%);
+}
+
+header nav ul ul {
+	display: none;
+}
+
+.centered {
+	width: auto;
+	margin: 0 auto;
+}
+
+//main/article
+main h1,
+article h1,
+div h1 {
+	text-align: center;
+}
+
+//sideNav (div)
+.sideNav {
+	display: none;
+}
+
+//footer
+footer {
+	background-color: darken($accent, 60%);
+	padding-top: 10px;
+	padding-bottom: 25px;
+}
+
+footer * {
+	color: white;
+	text-decoration: none;
+}
+
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6,
+footer ul {
+	margin: 0 auto;
+	max-width: 600px;
+	text-align: center;
+}
+
+footer a {
+	font-size: 16px;
+	line-height: 180%;
+}
+
+footer a:hover {
+	color: $accent;
+	border-bottom: solid 2px $accent;
+}

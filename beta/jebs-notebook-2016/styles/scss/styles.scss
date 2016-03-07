@@ -1,0 +1,17 @@
+/*--------------------------------------
+all styles compiled into here
+---------------------------------------*/
+
+@import "variables/view_ports.scss";
+@import "variables/colors.scss";
+@import "views/screen_sm";
+
+@media screen and (min-width: $VIEWPORT_MED) {
+    @import "views/screen_med";
+}
+@media screen and (min-width: $VIEWPORT_LG) {
+    @import "views/screen_lg";
+}
+@media screen and (min-width: $VIEWPORT_XL) {
+    @import "views/screen_xl";
+}
