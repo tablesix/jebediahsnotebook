@@ -1,0 +1,116 @@
+<html>
+<head></head>
+<body>
+    <form class="retireCalc" style="margin: 0 auto 150px; width: 500px;font-family: arial; letter-spacing: 1.125;" action=" " method="post" name="retireCalculator" id="retireCalculator">
+        <h2>Retirement Calculator</h2>
+        <label>
+            Average Salary:<br />$
+        </label>
+        <input type="text" id="salary" name="salary" value="0.00" />
+        <br />
+				<label>
+					Amount deposited yearly:<br />$
+				</label>
+				<input type="text" id="depositAmount" name="depositAmount" value="0.00"  />
+				<br />
+				<label>
+					Annual interest (%):<br />
+				</label>
+				<input type="text" id="interest" name="interest" value="0.00" />
+				<br />
+				<hr />
+        <h3>Fill out these three</h3>
+        <label>
+            Age starting work<br />
+        </label>
+        <input type="text" id="ageStartWork" name="ageStartWork" value="0"  />
+        <br />
+        <label>
+            Age ending work<br />
+        </label>
+        <input type="text" id="ageEndWork" name="ageEndWork" value="0"  />
+				<br />
+				<label>
+					Age at end of retirement:<br />
+				</label>
+				<input type="text" id="ageEndRetirement" name="ageEndRetirement" value="0"  />
+			<br />
+        <hr />
+        <h3>OR fill out these two:</h3>
+				<p>Note: the first group of values will be used if both are filled out correctly.</p>
+        <label>
+            Years worked:<br />
+
+        </label>
+        <input type="text" id="yearsWorked" name="yearsWorked" value="0"  />
+        <br />
+				<label>
+					Years retired:<br />
+
+				</label>
+				<input type="text" id="yearsRetired" name="yearsRetired" value="0"  />
+				<hr />
+        <input type="button" value="Calculate" onclick="calcRetirementFund()" tabindex="16" />
+        <br />
+        <hr />
+				<h3>Results:</h3>
+				<label>
+					Retirement Fund:<br />$
+
+				</label>
+				<input type="text" id="retirementFund"  value="0.00" />
+				<br />
+				<label>
+					Weekly allowance:<br />$
+
+				</label>
+				<input type="text" id="allowance" value="0.00"  />
+    </form>
+		<script type="text/javascript">
+        //
+        function calcRetirementFund() {
+						//non-optional variables
+            var salary = parseFloat(document.getElementById("salary").value);
+						var depositAmount =  parseFloat(document.getElementById("depositAmount").value);
+            var interest =  parseFloat(document.getElementById("interest").value);
+
+						//group 1 optional variables. Required if group 2 is not provided
+						var ageStartWork =  parseInt(document.getElementById("ageStartWork").value);
+						var ageEndWork =  parseInt(document.getElementById("ageEndWork").value);
+						var ageEndRetirement =  parseInt(document.getElementById("ageEndRetirement").value);
+
+						//group 2 optional variables. Required if group one is not provided
+						var yearsWorked =  parseInt(document.getElementById("yearsWorked").value);
+						var yearsRetired =  parseInt(document.getElementById("yearsRetired").value);
+
+						//output variables. Stored in display<var> for the actual display.
+						//These ones are just used for non-displayed math prior to display.
+						var retirementFund = 0;
+						var allowance = 0;
+
+						//checks whether the group 1 variables are valid.
+						if (ageStartWork > 0 && ageEndWork > ageStartWork && ageEndRetirement > ageEndWork ) {
+								yearsRetired = ageEndRetirement - ageEndWork;
+						}
+
+						retirementFund = 0;
+
+						//loop structure below increments counter until counter is equal to years retired.
+						// it also increases retirementFund based on interest, and amount added to the total pot.
+						var counter = 0;
+						if(yearsRetired > 0) {
+								while(counter < yearsRetired) {
+									retirementFund = retirementFund + depositAmount;
+									retirementFund = retirementFund + retirementFund * (interest/100);
+									counter = counter + 1;
+								}
+						}
+
+						//finishing touches to data, and displaying data in the final 2 form input fields.
+						allowance = retirementFund/(yearsRetired*52);
+						document.getElementById("retirementFund").value = retirementFund.toFixed(2);
+						document.getElementById("allowance").value = allowance.toFixed(2);
+        }
+    </script>
+</body>
+</html>
