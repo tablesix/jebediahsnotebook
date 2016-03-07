@@ -1,0 +1,20 @@
+/*----------------------------------------
+Styles for small screen sizes (400px and less)
+-----------------------------------------*/
+
+/*defaults-------------------------------*/
+@import "../partials/default-styles/default_sm";
+
+
+/*layouts--------------------------------*/
+@import "../partials/layout-styles/layout_sm";
+
+
+/*media----------------------------------*/
+@import "../partials/media-styles/media_sm";
+
+/*tables---------------------------------*/
+@import "../partials/table-styles/table_sm";
+
+/*non-standard---------------------------*/
+@import "../partials/non-standard-styles/non-standard_sm";

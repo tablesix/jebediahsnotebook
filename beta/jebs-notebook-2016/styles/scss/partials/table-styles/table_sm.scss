@@ -1,0 +1,48 @@
+/*-------------------------
+table styles, 0px and up
+--------------------------*/
+.tableWrapper {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+table th,
+table thead td,
+table thead th {
+	background-color: $accent;
+	padding: 8px;
+	font-size: 120%;
+	font-weight: 1400;
+}
+
+table {
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-top: 25px;
+	width: 100%;
+
+}
+
+table td,
+table th {
+	text-align: center;
+}
+
+
+table td,
+table th {
+	padding: 3px;
+}
+
+table tr:nth-child(even) {
+	background-color: lighten($primary, 65%);
+}
+
+table tfoot tr {
+	border-top: solid $accent 2px;
+	border-bottom: solid $accent 2px;
+}
+
+table tfoot td {
+	text-align: center;
+}

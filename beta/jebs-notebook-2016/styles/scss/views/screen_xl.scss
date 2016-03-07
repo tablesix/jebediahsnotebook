@@ -1,0 +1,22 @@
+/*----------------------------------------
+Styles for extra large screen sizes (1200px and up)
+-----------------------------------------*/
+
+/*defaults-------------------------------*/
+@import "../partials/default-styles/default_xl";
+
+
+/*layouts--------------------------------*/
+@import "../partials/layout-styles/layout_xl";
+
+
+/*media----------------------------------*/
+@import "../partials/media-styles/media_xl";
+
+
+/*tables---------------------------------*/
+@import "../partials/table-styles/table_xl";
+
+
+/*non-standard---------------------------*/
+@import "../partials/non-standard-styles/non-standard_xl";
