@@ -90,6 +90,7 @@
 
 						//checks whether the group 1 variables are valid.
 						if (ageStartWork > 0 && ageEndWork > ageStartWork && ageEndRetirement > ageEndWork ) {
+								yearsWorked = ageEndWork - ageStartWork;
 								yearsRetired = ageEndRetirement - ageEndWork;
 						}
 
@@ -98,8 +99,8 @@
 						//loop structure below increments counter until counter is equal to years retired.
 						// it also increases retirementFund based on interest, and amount added to the total pot.
 						var counter = 0;
-						if(yearsRetired > 0) {
-								while(counter < yearsRetired) {
+						if(yearsWorked > 0 && yearsWorked > counter) {
+								while(counter < yearsWorked) {
 									retirementFund = retirementFund + depositAmount;
 									retirementFund = retirementFund + retirementFund * (interest/100);
 									counter = counter + 1;
