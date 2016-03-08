@@ -2,8 +2,8 @@
 all styles compiled into here
 ---------------------------------------*/
 
-@import "variables/view_ports.scss";
-@import "variables/colors.scss";
+@import "variables/view_ports";
+@import "variables/colors";
 @import "views/screen_sm";
 
 @media screen and (min-width: $VIEWPORT_MED) {
@@ -14,4 +14,7 @@ all styles compiled into here
 }
 @media screen and (min-width: $VIEWPORT_XL) {
     @import "views/screen_xl";
+}
+@media screen and (min-width: $VIEWPORT_XXL) {
+    @import "views/screen_xxl";
 }

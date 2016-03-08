@@ -8,6 +8,8 @@ header {
 	width: 100%;
 	background-color: $primary;
 	padding-bottom: 10px;
+	position: fixed;
+	top: 0;
 }
 
 header h1,
@@ -20,11 +22,11 @@ header h1 a{
 
 header h2,
 header h2 a {
-	color: #fff;
+	color: $sub_logo;
 	text-align: center;
 	line-height: .75;
-	padding-bottom: 15px;
-	font-size: 1em;
+	padding-bottom: 5px;
+	font-size: 0em;
 }
 
 //header nav styles
@@ -48,6 +50,11 @@ header nav li {
 
 }
 
+header nav li .arrow-down {
+	width: 0;
+	height: 0;
+}
+
 header nav li a {
 	display: inline-block;
 	min-width: 80px;
@@ -62,7 +69,9 @@ header nav > ul > li {
 header nav > ul > li:hover {
 	background-color: darken($primary, 15%);
 }
-
+header nav a:hover {
+	color: $sub_logo;
+}
 header nav ul ul {
 	display: none;
 }
@@ -73,6 +82,9 @@ header nav ul ul {
 }
 
 //main/article
+main {
+	margin-top: 75px;
+}
 main h1,
 article h1,
 div h1 {
