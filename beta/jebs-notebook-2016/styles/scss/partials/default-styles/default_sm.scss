@@ -37,9 +37,14 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1.5;
 }
-ol, ul {
+ul {
 	list-style: none;
+	padding-bottom: 2px;
 }
+	ol {
+		padding-left: 20px;
+		list-style: lower-latin;
+	}
 blockquote, q {
 	quotes: none;
 }

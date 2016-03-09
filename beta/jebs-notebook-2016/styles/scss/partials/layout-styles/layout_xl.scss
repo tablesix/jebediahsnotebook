@@ -1,4 +1,52 @@
 .contentWrapper {
-	width: 1000px;
+	width: 85%;
 	margin: 0 auto;
+	overflow: auto;
+	margin-top: 25px;
+}
+
+.contentWrapper .primary {
+	float: left;
+	max-width: 80%;
+}
+
+.contentWrapper .secondary {
+	width: 18%;
+	float: right;
+	margin-top: 130px;
+}
+
+.contentWrapper .secondary .sideNav {	
+	display: inline-block;
+	background-color: lighten($primary, 65%);
+	color: darken($primary, 100%);
+	padding: 15px;
+	border: 2px $primary solid;
+}
+
+.contentWrapper .secondary .sideNav h2 {
+	font-size: 120%;
+}
+
+.contentWrapper .secondary .sideNav p,
+.contentWrapper .secondary .sideNav li, 
+.contentWrapper .secondary .sideNav li a {
+	font-size: 100%;
+}
+
+.contentWrapper .secondary .sideNav ul ul, 
+.contentWrapper .secondary .sideNav ol ol, 
+.contentWrapper .secondary .sideNav ol ul, 
+.contentWrapper .secondary .sideNav ul ol {
+	margin-left: 10px;
+} 
+
+.contentWrapper .secondary .sideNav li, 
+.contentWrapper .secondary .sideNav li a {
+	font-size: 110%;
+}
+
+.contentWrapper .secondary .sideNav li li, 
+.contentWrapper .secondary .sideNav li li a {
+	font-size: 100%;
 }

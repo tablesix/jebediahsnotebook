@@ -4,7 +4,11 @@ all styles compiled into here
 
 @import "variables/view_ports";
 @import "variables/colors";
-@import "views/screen_sm";
+@import "views/screen_default";
+
+@media screen and (min-width: $VIEWPORT_SM) {
+	@import "views/screen_sm";
+}
 
 @media screen and (min-width: $VIEWPORT_MED) {
     @import "views/screen_med";

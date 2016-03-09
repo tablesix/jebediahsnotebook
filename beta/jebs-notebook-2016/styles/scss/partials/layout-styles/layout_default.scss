@@ -3,9 +3,13 @@ general layouts for pages
 ----------------------------------------*/
 
 //header styles
-
-html header {
-	padding-bottom: 15px;
+header {
+	display: block;
+	width: 100%;
+	background-color: $primary;
+	padding-bottom: 15px; 
+	position: fixed;
+	top: 0;
 }
 
 header h1,
@@ -39,9 +43,9 @@ header nav li a {
 }
 
 header nav li {
-	display: inline;
-	margin-left: 10px;
-	margin-right: 10px;
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
 
 }
 
@@ -52,7 +56,7 @@ header nav li .arrow-down {
 
 header nav li a {
 	display: inline-block;
-	min-width: 80px;
+	min-width: 10px;
 }
 
 header nav > ul > li {
@@ -75,6 +79,22 @@ header nav ul ul {
 	width: auto;
 	margin: 0 auto;
 }
+
+
+//contentWrapper 
+
+body .contentWrapper {
+		margin-top: 25px;
+}
+
+body .contentWrapper ul > li:before {
+	content: '-';
+	float: left;
+	padding-right: 5px;
+	font-weight: normal;
+	font-size: 110%;
+}
+
 
 //main/article
 main {
