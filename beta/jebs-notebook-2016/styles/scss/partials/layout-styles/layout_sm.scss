@@ -76,9 +76,12 @@ header nav ul ul {
 	margin: 0 auto;
 }
 
+body .contentWrapper {
+	margin-top: 100px;
+}
 //main/article
 main {
-	margin-top: 75px;
+	margin-top: 0;
 }
 main h1,
 article h1,

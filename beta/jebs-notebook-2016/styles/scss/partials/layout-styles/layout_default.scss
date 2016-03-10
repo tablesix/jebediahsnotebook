@@ -84,7 +84,7 @@ header nav ul ul {
 //contentWrapper 
 
 body .contentWrapper {
-		margin-top: 25px;
+		margin-top: 115px;
 }
 
 body .contentWrapper ul > li:before {
@@ -98,7 +98,8 @@ body .contentWrapper ul > li:before {
 
 //main/article
 main {
-	margin-top: 75px;
+	//margin-top: 75px;
+	margin-top: 0px;
 }
 main h1,
 article h1,
@@ -131,7 +132,7 @@ footer h5,
 footer h6,
 footer ul {
 	margin: 0 auto;
-	max-width: 600px;
+	max-width: 1200px;
 	text-align: center;
 }
 

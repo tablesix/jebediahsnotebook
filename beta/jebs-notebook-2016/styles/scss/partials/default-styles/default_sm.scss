@@ -13,7 +13,7 @@ default/general styles
 }
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -41,10 +41,13 @@ ul {
 	list-style: none;
 	padding-bottom: 2px;
 }
-	ol {
-		padding-left: 20px;
-		list-style: lower-latin;
-	}
+ol {
+	padding-left: 20px;
+	list-style: lower-latin;
+}
+p, h1, h2, h3, h4, h5, h6, {
+	margin: 0 15px;
+}
 blockquote, q {
 	quotes: none;
 }
