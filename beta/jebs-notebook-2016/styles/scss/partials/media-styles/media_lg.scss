@@ -5,3 +5,46 @@
 	margin-right: auto;
 
 }
+
+.quarter {
+	width: 25%;
+	overflow: hidden;
+	padding: .5%;
+	background-color: $accent;
+	margin: 5px;
+}
+
+.quarter img {
+	width: 99%;
+	margin: 0 auto;
+}
+
+.enlarged {
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0 0 5px 0;
+	display: block;
+}
+.enlarged * {
+	width: 100%;
+}
+.hasHiddenCaption:hover {
+	cursor: pointer;
+}
+
+.hasHiddenCaption:hover .hiddenCaption {
+	display: inline-block;
+	background-color: rgba(25,25,25, .5);
+	width: 75%;
+	margin-top: -35px;
+	margin-left: 12.5%;
+	text-align: center;
+	color: white;
+	border-radius: 10px;
+
+}
+
+.enlarged:hover .hiddenCaption {
+	display: none;
+}

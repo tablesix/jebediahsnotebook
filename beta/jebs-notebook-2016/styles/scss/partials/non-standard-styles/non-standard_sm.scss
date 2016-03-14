@@ -1,3 +1,63 @@
 .extras {
 	display: none;
 }
+
+.accent {
+	border-color: $accent;
+}
+
+.sub_logo {
+	border-color: $sub_logo;
+	color: $sub_logo;
+	background-color: $sub_logo;
+}
+
+/*----------------
+accordion styles
+-----------------*/
+
+.accordionItem {
+	margin-bottom: 5px;
+}
+
+.accordionItem h2::selection {
+	background-color: darken($accent, 60%);
+}
+
+.accordionItem h2 {
+	color: $sub_logo;
+	margin: 0;
+	border: 2px darken($accent, 60%) solid;
+	padding: 5px 0px 5px 5px;
+	background-color: darken($accent, 60%);
+	cursor: pointer;
+	text-align: center;
+
+}
+
+.accordionItem div {
+	border: 2px darken($accent, 60%) solid;
+	display: block;
+	width: inherit;
+	clear: both;
+}
+
+.hide div {
+	height: 0px;
+	overflow: auto;
+	border: none;
+}
+
+.hide h2,
+.hide h2::selection {
+	display: block;
+	background-color: $primary;
+	border-color: $primary;
+}
+
+.accordionItem div * {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+

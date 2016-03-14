@@ -145,3 +145,10 @@ footer a:hover {
 	color: $accent;
 	border-bottom: solid 2px $accent;
 }
+
+
+//other
+.clearFix {
+	clear: both;
+	border: 0px white solid !important;
+}
