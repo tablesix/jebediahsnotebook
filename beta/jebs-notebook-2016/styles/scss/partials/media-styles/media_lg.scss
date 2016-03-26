@@ -26,8 +26,15 @@
 	margin: 0 0 5px 0;
 	display: block;
 }
-.enlarged * {
+.enlarged img,
+.enlarge a,
+.enlarged p,
+.enlarged li,
+.enlarged figcaption {
 	width: 100%;
+	border: 0px;
+	margin: 0;
+	padding: 0;
 }
 .hasHiddenCaption:hover {
 	cursor: pointer;
@@ -35,7 +42,7 @@
 
 .hasHiddenCaption:hover .hiddenCaption {
 	display: inline-block;
-	background-color: rgba(25,25,25, .5);
+	background-color: rgba(25,25,25, .8);
 	width: 75%;
 	margin-top: -35px;
 	margin-left: 12.5%;

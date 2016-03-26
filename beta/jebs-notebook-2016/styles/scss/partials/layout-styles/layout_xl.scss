@@ -7,27 +7,37 @@
 
 .contentWrapper .primary {
 	float: left;
-	max-width: 80%;
+	max-width: 79%;
 }
 
 .contentWrapper .secondary {
-	width: 18%;
+	width: 20%;
+	//min-width: 250px;
 	float: right;
+	//background-color: darken($sub_logo, 2%);
+	//height: 100%;
+	margin-bottom: 1%;
+	border-left: 2px $primary solid;
 	//margin-top: 155px;
 }
 
 .contentWrapper .secondary .sideNav {	
 	display: inline-block;
-	background-color: lighten($primary, 65%);
+	//background-color: lighten($primary, 65%);
 	color: darken($primary, 100%);
 	padding: 15px;
-	border: 2px $primary solid;
+
 }
 
 .contentWrapper .secondary .sideNav h2 {
 	font-size: 120%;
 }
 
+.contentWrapper .secondary .sideNav ul,
+.contentWrapper .secondary .sideNav ol {
+	list-style: none !important;
+	font-weight: 200;
+}
 .contentWrapper .secondary .sideNav p,
 .contentWrapper .secondary .sideNav li, 
 .contentWrapper .secondary .sideNav li a {
