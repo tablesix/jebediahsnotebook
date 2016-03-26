@@ -62,7 +62,7 @@ header nav > ul > li {
 }
 
 header nav > ul > li:hover {
-	background-color: darken($primary, 15%);
+	//background-color: darken($primary, 15%);
 }
 header nav a:hover {
 	color: $sub_logo;
@@ -118,12 +118,12 @@ footer ul {
 	text-align: center;
 }
 
-footer a {
-	font-size: 16px;
-	line-height: 180%;
-}
+//footer a {
+//	font-size: 16px;
+//	line-height: 180%;
+//}
 
 footer a:hover {
 	color: $accent;
-	border-bottom: solid 2px $accent;
+	//border-bottom: solid 2px $accent;
 }

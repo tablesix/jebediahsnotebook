@@ -143,10 +143,6 @@ header nav > ul > li {
   padding: 5px 8px 5px 8px;
 }
 
-header nav > ul > li:hover {
-  background-color: #1a1a1a;
-}
-
 header nav a:hover {
   color: #ffffff;
 }
@@ -209,14 +205,19 @@ footer ul {
   text-align: center;
 }
 
+footer > ul > li {
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 footer a {
-  font-size: 16px;
+  font-size: 12px;
   line-height: 180%;
 }
 
 footer a:hover {
   color: #abe2ff;
-  border-bottom: solid 2px #abe2ff;
 }
 
 .clearFix {
@@ -421,9 +422,6 @@ general layouts for pages
     border-radius: 10px;
     padding: 5px 8px 5px 8px;
   }
-  header nav > ul > li:hover {
-    background-color: #1a1a1a;
-  }
   header nav a:hover {
     color: #ffffff;
   }
@@ -468,13 +466,8 @@ general layouts for pages
     max-width: 600px;
     text-align: center;
   }
-  footer a {
-    font-size: 16px;
-    line-height: 180%;
-  }
   footer a:hover {
     color: #abe2ff;
-    border-bottom: solid 2px #abe2ff;
   }
   /*defaults-------------------------------*/
   /*--------------------------------------
@@ -568,6 +561,10 @@ Styles for medium screen sizes (600px and up)
     display: inline;
     margin-left: 10px;
     margin-right: 10px;
+  }
+  footer a {
+    font-size: 16px;
+    line-height: 180%;
   }
   footer {
     margin-bottom: 0;
