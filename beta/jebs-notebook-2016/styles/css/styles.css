@@ -224,6 +224,15 @@ footer a:hover {
   border: 0px white solid !important;
 }
 
+body {
+  height: 100%;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+}
+
 /*media----------------------------------*/
 .featured {
   width: 100%;
@@ -564,9 +573,9 @@ Styles for medium screen sizes (600px and up)
     margin-bottom: 0;
     padding-bottom: 35px;
   }
-  /*media----------------------------------*/
-  /*tables---------------------------------*/
-  /*non-standard---------------------------*/
+  /*
+afterthought. Increasing padding
+*/
   .mainWrapper p, .mainWrapper td, .mainWrapper tr, .mainWrapper th, .mainWrapper table, .mainWrapper img, .mainWrapper ul, .mainWrapper li {
     margin: 10px;
   }
@@ -593,6 +602,9 @@ Styles for medium screen sizes (600px and up)
   header h1 {
     margin-bottom: 30px;
   }
+  /*media----------------------------------*/
+  /*tables---------------------------------*/
+  /*non-standard---------------------------*/
 }
 
 @media screen and (min-width: 850px) {
